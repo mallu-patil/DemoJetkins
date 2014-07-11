@@ -1,0 +1,46 @@
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<ItemGroup>
+		<ReleaseBuild Include = "ReleaseBuildArtifacts\"/>	
+		<DebugBuild Include = "DebugBuildArtifacts\"/>	
+		<Solution Include="Src\MathLib.sln"/>
+		<NUnitConsole Include = "C:\Program Files\NUnit 2.6.3\bin\nunit-console.exe"/>
+		<TestDll	Include="ReleaseBuildArtifacts\MathLibTest.dll"/>
+		<TestResultsPath Include = "ReleaseBuildArtifacts\TestResults.xml"/>
+	</ItemGroup>
+	
+	<PropertyGroup>
+		<Configuration>Release</Configuration>
+		<BuildPlatform>Any Cpu</BuildPlatform>
+	</PropertyGroup>
+
+	<Target Name = "Welcome">
+		<Exec Command = "echo Welcome to build"/>
+	</Target>
+	<Target Name="Init" DependsOnTargets="Welcome;Clean">
+		<MakeDir Directories="@(ReleaseBuild)"/>
+		<MakeDir Directories="@(DebugBuild)"/>
+	</Target>
+
+	<Target Name = "Clean">
+		<RemoveDir Directories="@(ReleaseBuild)"/>
+		<RemoveDir Directories="@(DebugBuild)"/>
+	</Target>
+
+	<Target Name = "CompileDebug" DependsOnTargets="Init">
+		<MSBuild Projects = "@(Solution)" Targets="Rebuild"
+		Properties = "OutDir = %(DebugBuild.FullPath);Configuration=Debug;Platform=$(BuildPlatform)"/>
+	</Target>
+	<Target Name = "CompileRelease" DependsOnTargets="Init">
+		<MSBuild Projects = "@(Solution)" Targets="Rebuild"
+		Properties = "OutDir = %(ReleaseBuild.FullPath);Configuration=Release;Platform=$(BuildPlatform)"/>
+	</Target>
+	<Target Name="Test" DependsOnTargets="CompileDebug;CompileRelease">
+		<Exec Command = '"@(NUnitConsole)" @(TestDll) /xml:@(TestResultsPath)'/>
+	</Target>
+</Project>
+
+
+
+
