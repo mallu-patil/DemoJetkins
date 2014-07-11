@@ -37,7 +37,7 @@
 		Properties = "OutDir = %(ReleaseBuild.FullPath);Configuration=Release;Platform=$(BuildPlatform)"/>
 	</Target>
 	<Target Name="Test" DependsOnTargets="CompileDebug;CompileRelease">
-		<Exec Command = '"@(NUnitConsole)" @(TestDll) /xml:@(TestResultsPath)'/>
+		<Exec Command  = '"@(NUnitConsole)" @(TestDll) /xml:@(TestResultsPath)'/>
 	</Target>
 </Project>
 
