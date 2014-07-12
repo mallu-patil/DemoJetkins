@@ -17,7 +17,7 @@ namespace MathLibTest
         {
             MathLib.Math obj = new MathLib.Math();
 
-            Assert.AreEqual(obj.Add(10, 10), 20);
+            Assert.AreEqual(obj.Add(10, 10), 30);
         }
         [Test]
         public void TestSub()
