@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Console
 {
     public delegate void Handle(string msg);
-
+	// Added comments
     class Hash
     {
         public Func<string> Add { get; set; }
