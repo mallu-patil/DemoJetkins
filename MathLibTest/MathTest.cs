@@ -23,7 +23,7 @@ namespace MathLibTest
         public void TestSub()
         {
             MathLib.Math obj = new MathLib.Math();
-            Assert.AreEqual(obj.Sub(20, 10), 10);
+            Assert.AreEqual(obj.Sub(20, 20), 10);
         }
     }
 }
