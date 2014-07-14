@@ -17,7 +17,11 @@ namespace Console
 
         public void StartAction()
         {
-            MyAction("Hello Hi Dear");
+            MyAction("Hello Hi Dear and how are you");
+        }
+	public void StartActionNew()
+        {
+            MyAction("Hello Hi Dear I am fine.");
         }
     }
     class Program
