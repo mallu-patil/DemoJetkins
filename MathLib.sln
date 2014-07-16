@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibTest", "MathLibTest\MathLibTest.csproj", "{C68ABE1E-F79F-404C-BACD-587A405419D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{59856F34-6CBD-4D7F-BA25-4E834AD0176B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{82C3607D-06AE-40C9-B948-521E679E77F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{18BA7FA4-1063-42CA-A9AC-A500B32FA6C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +34,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAD40053-D1AB-4EA0-B823-8CC413FBA0A8} = {59856F34-6CBD-4D7F-BA25-4E834AD0176B}
+		{6F1B4124-FAF1-440E-86F5-742A4C507F75} = {82C3607D-06AE-40C9-B948-521E679E77F2}
+		{C68ABE1E-F79F-404C-BACD-587A405419D6} = {18BA7FA4-1063-42CA-A9AC-A500B32FA6C5}
 	EndGlobalSection
 EndGlobal
