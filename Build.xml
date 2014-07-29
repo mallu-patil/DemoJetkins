@@ -5,7 +5,7 @@
 		<ReleaseBuild Include = "ReleaseBuildArtifacts\"/>	
 		<DebugBuild Include = "DebugBuildArtifacts\"/>	
 		<Solution Include="MathLib.sln"/>
-		<NUnitConsole Include = "C:\Program Files\NUnit 2.6.3\bin\nunit-console.exe"/>
+		<NUnitConsole Include = "C:\Program Files (x86)\NUnit 2.6.3\bin\nunit-console.exe"/>
 		<TestDll	Include="ReleaseBuildArtifacts\MathLibTest.dll"/>
 		<TestResultsPath Include = "ReleaseBuildArtifacts\TestResults.xml"/>
 	</ItemGroup>
